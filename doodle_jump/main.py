@@ -7,10 +7,12 @@ pygame.init()
 
 width = 600
 height = 800
-
+background_color = (34, 34, 54)
 doodle1 = Doodle()
 
 win = pygame.display.set_mode((width, height))
+win.fill(background_color)
+pygame.display.flip()
 
 pygame.display.set_caption("Doodle Jump")
 
