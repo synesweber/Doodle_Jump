@@ -1,4 +1,4 @@
-    import pygame as pygame
+import pygame as pygame
 
 from doodle_jump.doodle import Doodle
 
