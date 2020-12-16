@@ -9,7 +9,8 @@ height = 800
 background_color = (255, 255, 255)
 color = (255, 0, 0)
 
-doodle1 = Doodle()
+
+doodle1 = Doodle([int(width/2), int(height/2)])
 
 win = pygame.display.set_mode((width, height))
 win.fill(background_color)
