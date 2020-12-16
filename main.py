@@ -1,6 +1,6 @@
 import pygame as pygame
 
-from doodle_jump.doodle import Doodle
+
 
 
 pygame.init()
