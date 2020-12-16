@@ -17,6 +17,7 @@ pygame.display.flip()
 
 pygame.display.set_caption("Doodle Jump")
 
+
 def check_keys():
     keys = pygame.key.get_pressed()
 
@@ -42,11 +43,7 @@ while run:
         if event.type == pygame.QUIT:
             run = False
 
-
     check_keys()
-
-
-
 
 pygame.quit()
 
