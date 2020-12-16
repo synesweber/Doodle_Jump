@@ -1,5 +1,6 @@
 import pygame
 
+
 from doodle_jump.doodle import Doodle
 
 pygame.init()
@@ -16,10 +17,10 @@ pygame.display.set_caption("Doodle Jump")
 run = True
 
 while run:
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
-
 
 
 pygame.quit()
