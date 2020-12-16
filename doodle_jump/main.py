@@ -7,7 +7,7 @@ pygame.init()
 
 width = 600
 height = 800
-background_color = (34, 34, 54)
+background_color = (134, 134, 154)
 doodle1 = Doodle()
 
 win = pygame.display.set_mode((width, height))
