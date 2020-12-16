@@ -22,6 +22,30 @@ pygame.display.flip()
 
 pygame.display.set_caption("Doodle Jump")
 
+for x in range(4):
+    x = random.randint(0, 600)
+    y = random.randint(0, 200)
+    pygame.draw.rect(win, color, [x, y, 75, 10], False)
+    pygame.display.flip()
+
+for x in range(4):
+    x = random.randint(0, 600)
+    y = random.randint(200, 400)
+    pygame.draw.rect(win, color, [x, y, 75, 10], False)
+    pygame.display.flip()
+
+for x in range(4):
+    x = random.randint(0, 600)
+    y = random.randint(400, 600)
+    pygame.draw.rect(win, color, [x, y, 75, 10], False)
+    pygame.display.flip()
+
+for x in range(4):
+    x = random.randint(0, 600)
+    y = random.randint(600, 800)
+    pygame.draw.rect(win, color, [x, y, 75, 10], False)
+    pygame.display.flip()
+
 
 def check_keys():
     keys = pygame.key.get_pressed()
@@ -44,14 +68,12 @@ run = True
 while run:
     for event in pygame.event.get():
         # pygame.draw.rect(win, color, [randint(0, 600), randint(0, 700), 75, 10], False)
-        x = random.randint(0, 600)
-        y = random.randint(0, 800)
-        pygame.draw.rect(win, color, [x, y, 75, 10], False)
-        pygame.display.flip()
         if event.type == pygame.QUIT:
             run = False
 
     check_keys()
+
+pygame.display.update()
 
 pygame.quit()
 
