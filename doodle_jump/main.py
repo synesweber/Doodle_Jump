@@ -7,6 +7,7 @@ pygame.init()
 width = 600
 height = 800
 background_color = (255, 255, 255)
+color = (255, 0, 0)
 
 doodle1 = Doodle()
 
@@ -16,16 +17,18 @@ pygame.display.flip()
 
 pygame.display.set_caption("Doodle Jump")
 
-pygame.draw.rect(win, [red, green, blue], [left, top, width, 100], filled)
-# win.fill([255, 255, 255])
-# pygame.display.flip()
+
+
 
 run = True
 
 while run:
     for event in pygame.event.get():
+        pygame.draw.rect(win, color, [200, 700, 75, 10], False)
+        pygame.display.flip()
         if event.type == pygame.QUIT:
             run = False
+
 
 
 
