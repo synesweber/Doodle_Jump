@@ -13,13 +13,31 @@ color = (255, 0, 0)
 # x = random.randint(0, 600)
 # y = random.randint(0, 800)
 
-doodle1 = Doodle()
+
+doodle1 = Doodle([int(width/2), int(height/2)])
 
 win = pygame.display.set_mode((width, height))
 win.fill(background_color)
 pygame.display.flip()
 
 pygame.display.set_caption("Doodle Jump")
+
+
+def check_keys():
+    keys = pygame.key.get_pressed()
+
+    if keys[pygame.K_LEFT] and doodle1.pos[0] > 0:
+        doodle1.pos[0] -= 1
+
+    if keys[pygame.K_RIGHT] and doodle1.pos[0] < width:
+        doodle1.pos[0] += 1
+
+    if keys[pygame.K_UP] and doodle1.pos[1] > 0:
+        doodle1.pos[1] -= 1
+
+    if keys[pygame.K_DOWN] and doodle1.pos[1] < width:
+        doodle1.pos[1] += 1
+
 
 run = True
 
@@ -32,6 +50,8 @@ while run:
         pygame.display.flip()
         if event.type == pygame.QUIT:
             run = False
+
+    check_keys()
 
 pygame.quit()
 
