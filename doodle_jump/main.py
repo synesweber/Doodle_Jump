@@ -56,18 +56,13 @@ def check_keys():
     if keys[pygame.K_RIGHT] and doodle1.pos[0] < width:
         doodle1.pos[0] += 1
 
-    if keys[pygame.K_UP] and doodle1.pos[1] > 0:
-        doodle1.pos[1] -= 1
-
-    if keys[pygame.K_DOWN] and doodle1.pos[1] < width:
-        doodle1.pos[1] += 1
-
 
 run = True
 
 while run:
     for event in pygame.event.get():
         # pygame.draw.rect(win, color, [randint(0, 600), randint(0, 700), 75, 10], False)
+        Doodle.pos[1] = Doodle.pos[1] - 10
         if event.type == pygame.QUIT:
             run = False
 

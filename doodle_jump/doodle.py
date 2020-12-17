@@ -9,3 +9,4 @@ class Doodle:
 
     def draw(self, win):
         win.blit(self.img, (self.pos[0], self.pos[1]))
+
